@@ -69,10 +69,6 @@ BOARD_CHARGER_ENABLE_SUSPEND := true
 BACKLIGHT_PATH := /sys/class/leds/lcd-backlight/brightness
 BOARD_NO_CHARGER_LED := true
 
-# CMHW
-BOARD_USES_CYANOGEN_HARDWARE := true
-BOARD_HARDWARE_CLASS := hardware/cyanogen/cmhw
-
 # Crypto
 TARGET_HW_DISK_ENCRYPTION := true
 
@@ -131,6 +127,10 @@ TARGET_USES_UNCOMPRESSED_KERNEL := true
 
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
+
+# Lineage Hardware
+BOARD_HARDWARE_CLASS += \
+    $(DEVICE_PATH)/lineagehw
 
 # Peripheral manager
 TARGET_PER_MGR_ENABLED := true
